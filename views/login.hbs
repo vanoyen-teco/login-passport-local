@@ -1,0 +1,20 @@
+<div class="container row">
+    <div class="jumbotron col-sm-8 pull-center">
+        <form autocomplete="off" action="/login" method="post">
+            <div class="form-group">
+                <label>Username:</label>
+                <input class="form-control" required type="text" name="username"/>
+            </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input class="form-control" required type="password" name="password"/>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Log In"/>
+            </div>
+            {{#if error}}
+                <div class="alert bg-warning">Lo sentimos, usuario o contraseña incorrectos.</div>
+            {{/if}}
+        </form>                  
+    </div>          
+</div>
